@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Back!</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: lightblue; /* Default background color */
+        color: yellow;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Button styling */
+    #change-bg {
+        margin-top: auto;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin: 10px auto;
+        border: 2px solid white;
+    }
+
+    h2 {
+        font-family: Georgia, serif;
+        margin-top: 20px;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="main-title">I'm Back!</h1>
+<p class="intro">Hi! My name is RhodeJohn.</p>
+
+<img src="8ball.webp" alt="RhodeJohn" class="profile-pic">
+
+<h2>Class Expectations</h2>
+<p>Asynchronous.</p>
+<p>Early Dismissal.</p>
+<p>Less Workloads.</p>
+
+<h2>Subject Expectations</h2>
+<p>Collaborate with peers on group projects, sharing knowledge and helping others when needed.</p>
+<p>Write clean, well-documented, and efficient JavaScript code with proper indentation.</p>
+<p>Understanding how to build apps that work offline and provide a native app-like experience.</p>
+
+<h2>Future PHP Projects</h2>
+<p>Develop a Augmented Reality Billiard.</p>
+<p>Develop an online learning platform where users can register for courses, watch videos, and take quizzes.</p>
+<p>Build a system that allows users to create, manage, and register for events.</p>
+
+<button id="change-bg">Change Background</button>
+
+<script>
+    const btn = document.getElementById("change-bg");
+    let bgImages = [
+        "url('carlo.jpeg')",  
+        "url('chua.jpg')",     
+        "url('efren.jpg')",     
+        "url('jaybee.webp')"
+    ];
+    let index = 0;
+
+    btn.addEventListener("click", () => {
+        index = (index + 1) % bgImages.length; 
+        document.body.style.backgroundImage = bgImages[index];
+    });
+</script>
+
+</body>
+</html>
